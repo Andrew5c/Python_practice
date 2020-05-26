@@ -46,3 +46,15 @@ print(10/3)
 print(5//3)
 # 取余数
 print(10%3)
+
+print('ABC'.encode('ascii'))
+print('中文'.encode('utf-8'))
+
+# 计算str包含多少个字符
+print(len('ABC'))
+print(len('中文'))
+
+# 格式化输出
+print('%2d-%02d'%(3,1))
+print('%.2f'%3.1415)
+print('%d %%'%70)
