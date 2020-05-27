@@ -31,9 +31,9 @@ Python是一种**动态语言**,其在定义变量的时候,变量的类型不�
 - `encode()`:将str类型的字符串编码为指定的byte.
 - `decode()`:将从网络或者磁盘上读取的byte字节流,解码为str.
 
-> >>> 'ABC'.encode('ascii')
+> \>\>\> 'ABC'.encode('ascii')
 b'ABC'
->>> '中文'.encode('utf-8')
+\>\>\> '中文'.encode('utf-8')
 b'\xe4\xb8\xad\xe6\x96\x87'
 
 **由于Python源码本身也是一个文本文件,所以当源码中包含中文时,需要指定将源码保存为
