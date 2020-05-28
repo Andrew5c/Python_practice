@@ -1,5 +1,3 @@
-## Python practive
+## Python practice
 
-
-> Python from start to give up
- use the temp.
+- Python from start to give up
