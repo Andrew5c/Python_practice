@@ -1,7 +1,7 @@
 ## Python practice
 > Python from start to give up
 
-断断续续用过几次Python，但是每次都是现学现卖，不能了解其详细语法。因此产生了一个持续push的想法。这里的代码与笔记都是对廖雪峰Python教学内容的练习与总结，对自己是一个学习的过程，如果能对别人也有一点参考意义的话，那是非常好的。
+断断续续用过几次Python，但是每次都是现学现卖，不能了解其详细语法。因此产生了一个持续push的想法。这里的代码与笔记都是对[廖雪峰Python教学内容](https://www.liaoxuefeng.com/wiki/1016959663602400)的练习与总结，对自己是一个学习的过程，如果能对别人也有一点参考意义的话，那是非常好的。
 
 环境配置：Windows10 + Pycharm community 2016.3 + Anaconda 3 + Python 3.6.4
 
