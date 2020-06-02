@@ -1,6 +1,9 @@
 #!Anaconda/anaconda/python
 #coding: utf-8
 
+import functools
+
+
 # 一个普通的变量也可以指向函数
 # 函数名其实就是指向函数的变量
 print(abs(-10))
@@ -80,7 +83,7 @@ print('='*40)
 # lambda， 匿名函数
 # 没有函数名，只能有一个表达式
 
-# 比如前面应用map的时候，g改为匿名函数
+# 比如前面应用map的时候，如果匿名函数
 # 冒号前面是参数，后面是表达式
 L = map(lambda x: x*x, [1, 2, 3])
 print(list(L))
@@ -94,3 +97,61 @@ def return_lambda(x, y):
     return lambda : x*x + y*y
 
 print(return_lambda(2, 3)())
+
+
+
+# =================================================
+print('='*40)
+
+# 装饰器
+# 之前说过，函数也是一个对象，可以赋值给一个变量，然后通过变量调用该函数
+def now():
+    print('2020-6-2')
+
+another_now = now
+print(another_now())
+
+# 得到函数的名字
+print(now.__name__, another_now.__name__)
+
+
+# 现在想增加now函数的功能，但是又不改变他的原本定义
+# 用【装饰器 decorator】实现
+# 就是在代码运行期间动态的增加函数功能
+# 定义一个完整的decorator
+def mylog(function):
+    # 将原始函数的__name__属性复制到wrapper中
+    # 否则有些依赖函数签名的代码会报错
+    @functools.wraps(function)
+    def wrapper(*args, **kw):
+        print('call %s()' % function.__name__)
+        return function(*args, **kw)
+    return wrapper
+
+# 使用装饰器增强函数
+@mylog
+def my_now():
+    print('this is now')
+
+print(my_now())
+# 通过上面的输出可以发现，它先执行了装饰器里面的函数
+# 其实 @mylog 相当于执行了 my_now = mylog(my_now)
+# 使得 my_now 这个变量指向了装饰器返回的新的函数，而装饰器里面的那个
+# 函数又调用了原始的 my_now 函数。因此实现了函数的增强
+
+
+# 带参数的decorator
+def my_log_new(text):
+    def decorator(function):
+        @functools.wraps(function)
+        def wrapper(*args, **kw):
+            print('text: %s, function: %s()' % (text, function.__name__))
+            return function(*args, **kw)
+        return wrapper
+    return decorator
+
+@my_log_new('to execute')
+def print_now():
+    print('this is now')
+
+print(print_now())
