@@ -59,6 +59,7 @@ print('='*40)
 def lazy_sum(*args):
     def sum():
         temp = 0
+        # 使用主函数的参数
         for n in args:
             temp += n
         return temp
@@ -120,9 +121,10 @@ print(now.__name__, another_now.__name__)
 # 就是在代码运行期间动态的增加函数功能
 # 定义一个完整的decorator
 def mylog(function):
-    # 将原始函数的__name__属性复制到wrapper中
+    # 将原始函数（被装饰的那个函数）的__name__属性复制到wrapper中
     # 否则有些依赖函数签名的代码会报错
     @functools.wraps(function)
+    # 注意wrapper是可变参数
     def wrapper(*args, **kw):
         print('call %s()' % function.__name__)
         return function(*args, **kw)
@@ -155,3 +157,20 @@ def print_now():
     print('this is now')
 
 print(print_now())
+
+# Python 的decorator既可以用函数实现，也可以用类实现
+
+
+# =================================================
+print('='*40)
+
+# 偏函数： partial function
+# 把一个函数的某些参数给固定住，也就是设置默认值，并返回一个新的函数
+# 这样可以简化需要默认参数的函数的调用
+
+# int() 方法可以把字符串默认按照10进制进行转换
+print(int('1010'))
+
+# 也可以通过设置 base 默认参数修改
+int2 = functools.partial(int, base = 2)
+print(int2('1010'))
