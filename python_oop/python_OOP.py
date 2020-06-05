@@ -54,3 +54,7 @@ print(andrew.rank)
 
 # 上面说了，定义的一个类就是一种数据类型，因此我们可以判断一个变量是否指向了这个数据类型
 print(isinstance(andrew, Student))
+
+# 注意，这和判断一个变量是否指向str、list类似
+t = [1, 2, 3]
+print(isinstance(t, list))

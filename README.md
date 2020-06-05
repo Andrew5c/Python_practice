@@ -1,11 +1,11 @@
 ## Python practice
 > Python from start to give up
 
-断断续续用过几次Python，但是每次都是现学现卖，不能了解其详细语法。因此产生了一个持续push的想法。这里的代码与笔记都是对[廖雪峰Python教学内容](https://www.liaoxuefeng.com/wiki/1016959663602400)的练习与总结，对自己是一个学习的过程，如果能对别人也有一点参考意义的话，那是非常好的。
+断断续续用过几次Python，但是每次都是现学现卖，不能了解其详细语法 :sob。因此产生了一个持续push的想法 :muscle :muscle。这里的代码与笔记都是对[廖雪峰Python教学内容](https://www.liaoxuefeng.com/wiki/1016959663602400)的练习与总结，对自己是一个学习的过程，如果能对别人也有一点参考意义的话，那是非常好的。针对教学内容中的每一章内容，这里都对其中的示例代码进行了归纳整理。有的地方稍稍做了改动，使得示例更具有代表性。:) :fire
 
 环境配置：Windows10 + Pycharm community 2016.3 + Anaconda 3 + Python 3.6.4
 
-这里用`代码`+`注释`的形式练习Python语法，旨在对Python有一个初步的认识，没有深入挖掘。主要包含以下内容：
+这里用`代码`+`注释`的形式练习Python语法，旨在对Python有一个初步的认识，并没有深入探讨。主要包含以下内容：
 
 - 几行代码初识Python：输入、输出
 - Python基础知识拾遗：数据类型、字符串、编码问题、list、tuple、set、dictionary、if-else、while
@@ -14,3 +14,6 @@
 - 函数式编程：高阶函数、返回函数、匿名函数、装饰器、偏函数
 - 模块：使用Python中强大的模块并管理自己的模块
 - 面向对象编程：类的定义，实例化，封装、继承、多态
+- 程序中的异常捕获：try...except，logging
+- 进程与线程
+
