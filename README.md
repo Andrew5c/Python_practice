@@ -1,7 +1,7 @@
 ## Python practice :sunny:
 > Python from start to give up
 
-断断续续用过几次Python，但是每次都是现学现卖，不能了解其详细语法 :sob:。因此产生了一个持续push的想法 :muscle: :muscle:。这里的代码与笔记都是对[廖雪峰Python教学内容](https://www.liaoxuefeng.com/wiki/1016959663602400) :point_left: 的练习与总结，对自己是一个学习的过程，如果能对别人也有一点参考意义的话，那是非常好的。针对教学内容中的每一章内容，这里都对其中的示例代码进行了归纳整理。有的地方稍稍做了改动，使得示例更具有代表性。:smile:
+断断续续用过几次Python，但是每次都是现学现卖，不能了解其详细语法 :sob:。因此产生了一个持续push的想法 :muscle: :muscle:。这里的代码与笔记都是对[廖雪峰Python教学内容](https://www.liaoxuefeng.com/wiki/1016959663602400) :point_left: 的练习与总结，对自己是一个学习的过程，如果能对别人也有一点参考意义的话，那是非常好的。针对教学内容中的每一章内容，这里都对其中的示例代码进行了归纳整理，添加了详细的注释。有的地方稍稍做了改动，使得示例更具有代表性。当然这个系列仍然是管中窥豹，仅仅摸了点Python的门，旨在快速建立一个Python的直观印象，后面还需深入了解。:smile:
 
 环境配置：Windows10 + Pycharm community 2016.3 + Anaconda 3 + Python 3.6.4
 
