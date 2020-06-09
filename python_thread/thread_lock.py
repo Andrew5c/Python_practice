@@ -21,6 +21,7 @@ def change_balance(n):
     balance -= n
 
 def run_thread(n):
+    # 每个线程各操作100次
     for i in range(100):
         # 需要先获取锁
         # 但是同时只能有一个线程能成功获取锁，然后继续执行代码
