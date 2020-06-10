@@ -34,9 +34,18 @@ def run_thread(n):
             lock.release()
     return
 
+# 使用 with ——上下文管理器来使用lock
+# 这种方法的使用效果和上面一样
+def run_thread_with(n):
+    for i in range(100):
+        with lock:
+            change_balance(n)
+    return
+
+
 if __name__ == '__main__':
     t1 = threading.Thread(target=run_thread, args=(3,))
-    t2 = threading.Thread(target=run_thread, args=(5,))
+    t2 = threading.Thread(target=run_thread_with, args=(5,))
     t1.start()
     t2.start()
     t1.join()
